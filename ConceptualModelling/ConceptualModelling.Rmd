@@ -1,4 +1,4 @@
-# Conceptual Modelling
+# Covid-19 Tracking and Lifestyle Trends Data Mart: Conceptual Modelling
 
 ## Questions to be Answered
 
@@ -26,29 +26,7 @@ potential changes in citizens’ lifestyles. Note that mobility data are availab
 online from e.g., the google mobility repository and that weather data may be
 obtained from Environment and Climate Change Canada.) 
 
-
-
-## Consumer Habit Fact table
-
-### Dimensions
-
-- Sector 
-
-
-### DataSets Used 
-
-## Lifestyle Fact table
-
-### Dimensions
-
-- Weather
-- Public Events
-- Data (Conformed)
-
-
-### DataSets Used 
-
-## Covid Related Fact table
+## Fact Table
 
 ### Grain
 
@@ -56,24 +34,33 @@ Per day
 
 ### Fact Table Attributes
 
-#### Foreign KeysZZ
-- DateKey (FK)
+#### Foreign Keys
+- Date ID (FK)
+- Weather Forecast ID (FK)
+- Location ID (FK)
+- Mobility 
+
 
 #### Facts/Measures
 
-- Number of Cases
+- Number of Postive Cases
 - Number Recovered
-- total tests/test outcomes
+- Number of Tests
+- Restriction Zones (Protect, Restrict, Lockdown) 
 
 
-### Dimensions 
 
-- Date Related(Conformed)
+## Dimensions 
+- Weather Dimension
+  - Weather Forecast
+  - Location
+  - Date(Day)
+- Date Dimension
   - Date Stamp
   - Day of the week
   - Month
-  - Festivities (y/n)
-- Location Dimension (Conformed)
+  - Holiday (y/n)
+- Location Dimension 
   - Median Income
   - Population Density
   - Available Testing Locations
@@ -82,27 +69,40 @@ Per day
   - Age Group
   - Gender
   - Case Acquisition
-- Government Restrictions
+- Mobility Trend
+  - retail_and_recreation_percent_change_from_baseline	
+  - grocery_and_pharmacy_percent_change_from_baseline	
+  - parks_percent_change_from_baseline	
+  - transit_stations_percent_change_from_baseline	
+  - workplaces_percent_change_from_baseline	
+  - residential_percent_change_from_baseline
+- Covid Information
+  - Vaccinations 
+  - daily doses administered
+  - individuals fully vaccinated
+  - total doses given to fully vaccinated individuals
+  - current hospitalizations
+  - tests under investigation
+  - test outcomes
+
 
 
 ### DataSets Used 
 
 - (Status of COVID-19)[https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario]
-
-reporting date
-daily tests completed
-total tests completed
-test outcomes
-total case outcomes (resolutions and deaths)
-current tests under investigation
-current hospitalizations
-current patients in Intensive Care Units (ICUs)
-current patients in Intensive Care Units (ICUs) on ventilators
-change in number of cases from previous day by Public Health Unit (PHU)
+  - reporting date
+  - daily tests completed
+  - total tests completed
+  - test outcomes
+  - total case outcomes (resolutions and deaths)
+  - current tests under investigation
+  - current hospitalizations
+  - current patients in Intensive Care Units (ICUs)
+  - current patients in Intensive Care Units (ICUs) on ventilators
+  - change in number of cases from previous day by Public Health Unit (PHU)
 
 - (COVID-19 testing locations)[https://data.ontario.ca/dataset/covid-19-assessment-centre-locations]
-
-Location name
+  - Location name
 Location operator
 Physical address
 Phone number
@@ -137,4 +137,14 @@ total doses administered
 individuals fully vaccinated
 total doses given to fully vaccinated individuals
 
+- (Community Mobility Reports)[https://www.google.com/covid19/mobility/]
 
+retail_and_recreation_percent_change_from_baseline	
+grocery_and_pharmacy_percent_change_from_baseline	
+parks_percent_change_from_baseline	
+transit_stations_percent_change_from_baseline	
+workplaces_percent_change_from_baseline	
+residential_percent_change_from_baseline
+
+
+- [Restrictions (https://data.ontario.ca/dataset/ontario-covid-19-zones/resource/ce9f043d-f0d4-40f0-9b96-4c8a83ded3f6)
