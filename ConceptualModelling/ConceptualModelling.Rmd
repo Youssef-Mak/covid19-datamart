@@ -26,6 +26,12 @@ potential changes in citizens’ lifestyles. Note that mobility data are availab
 online from e.g., the google mobility repository and that weather data may be
 obtained from Environment and Climate Change Canada.) 
 
+
+TODO :
+
+- Declare the Grain (Todo once the fact table is fully completed)
+- Add the attribute description for the fact table facts and the dimensional attributes (e.g., Age: integer, minimum = 0 and maximum = 130, Sample value = 35).
+
 ## Fact Table
 
 ### Grain
@@ -38,8 +44,9 @@ Per day
 - Date ID (FK)
 - Weather Forecast ID (FK)
 - Location ID (FK)
-- Mobility 
-
+- Mobility Trend ID (FK)
+- Covid Info ID (FK)
+- Individual Profile (FK)
 
 #### Facts/Measures
 
@@ -47,8 +54,7 @@ Per day
 - Number Recovered
 - Number of Tests
 - Restriction Zones (Protect, Restrict, Lockdown) 
-
-
+- total case outcomes (resolutions and deaths)
 
 ## Dimensions 
 - Weather Dimension
@@ -77,19 +83,20 @@ Per day
   - workplaces_percent_change_from_baseline	
   - residential_percent_change_from_baseline
 - Covid Information
-  - Vaccinations 
-  - daily doses administered
+  - reporting date
   - individuals fully vaccinated
-  - total doses given to fully vaccinated individuals
   - current hospitalizations
   - tests under investigation
   - test outcomes
-
+  - current tests under investigation
+  - current patients in Intensive Care Units (ICUs)
+  - current patients in Intensive Care Units (ICUs) on ventilators
+  - change in number of cases from previous day by Public Health Unit (PHU)
 
 
 ### DataSets Used 
 
-- (Status of COVID-19)[https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario]
+- [Status of COVID-19](https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario)
   - reporting date
   - daily tests completed
   - total tests completed
@@ -101,16 +108,16 @@ Per day
   - current patients in Intensive Care Units (ICUs) on ventilators
   - change in number of cases from previous day by Public Health Unit (PHU)
 
-- (COVID-19 testing locations)[https://data.ontario.ca/dataset/covid-19-assessment-centre-locations]
+- [COVID-19 testing locations](https://data.ontario.ca/dataset/covid-19-assessment-centre-locations)
   - Location name
-Location operator
-Physical address
-Phone number
-Website
-Public Health Unit (PHU)
-Latitude
-Longitude
-Physical address
+  - Location operator
+  - Physical address
+  - Phone number
+  - Website
+  - Public Health Unit (PHU)
+  - Latitude
+  - Longitude
+  - Physical address
 Phone number
 Hours of operation
 Age restrictions
@@ -120,7 +127,7 @@ Walk in availability
 Temporary closure
 Active centre (indefinite closures
 
-- (Confirmed positive cases of COVID-19 in Ontario)[https://data.ontario.ca/en/dataset/confirmed-positive-cases-of-covid-19-in-ontario]
+- [Confirmed positive cases of COVID-19 in Ontario](https://data.ontario.ca/en/dataset/confirmed-positive-cases-of-covid-19-in-ontario)
 
 approximation of onset date
 age group
@@ -130,14 +137,14 @@ patient outcome
 reporting Public Health Unit (PHU)
 postal code, website, longitude, and latitude of PHU
 
-- (COVID-19 Vaccine Data in Ontario)[https://data.ontario.ca/dataset/covid-19-vaccine-data-in-ontario]
+- [COVID-19 Vaccine Data in Ontario](https://data.ontario.ca/dataset/covid-19-vaccine-data-in-ontario)
 
 daily doses administered
 total doses administered
 individuals fully vaccinated
 total doses given to fully vaccinated individuals
 
-- (Community Mobility Reports)[https://www.google.com/covid19/mobility/]
+- [Community Mobility Reports](https://www.google.com/covid19/mobility/)
 
 retail_and_recreation_percent_change_from_baseline	
 grocery_and_pharmacy_percent_change_from_baseline	
@@ -147,4 +154,10 @@ workplaces_percent_change_from_baseline
 residential_percent_change_from_baseline
 
 
-- [Restrictions (https://data.ontario.ca/dataset/ontario-covid-19-zones/resource/ce9f043d-f0d4-40f0-9b96-4c8a83ded3f6)
+- [Restrictions](https://data.ontario.ca/dataset/ontario-covid-19-zones/resource/ce9f043d-f0d4-40f0-9b96-4c8a83ded3f6)
+
+
+- [Daily Weather Data Ottawa](https://climate.weather.gc.ca/climate_data/daily_data_e.html?hlyRange=%7C&dlyRange=1889-11-01%7C2021-01-07&mlyRange=1889-01-01%7C2006-12-01&StationID=4333&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=1840&EndYear=2021&selRowPerPage=25&Line=7&searchMethod=contains&Month=12&Day=31&txtStationName=Ottawa&timeframe=2&Year=2020
+
+
+- [Daily Weather Data Toronto](https://climate.weather.gc.ca/climate_data/hourly_data_e.html?hlyRange=2009-12-10%7C2021-01-31&dlyRange=2010-02-02%7C2021-01-31&mlyRange=%7C&StationID=48549&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=2020&EndYear=2021&selRowPerPage=25&Line=2&searchMethod=contains&Month=1&Day=31&txtStationName=toronto&timeframe=1&Year=2021)
