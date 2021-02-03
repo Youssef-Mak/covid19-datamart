@@ -16,6 +16,7 @@ output:
 - Discussed Project plan
 - Registered the group
 - Brainstormed potential resources to utilize for project
+
 ## 29-01-2021 Friday 6:00-8:00
 - Brainstormed ideas on tackling concept Model
 - Brainstormed potential use of Constellation Schema
@@ -29,7 +30,7 @@ output:
 ## Fact Table
 
 ### Grain
-Covid Outbreak Status(Number of Positive COVID Cases, Number of Recovered COVID Cases, Number of Recovered COVID Cases, Number of Tests, Number of Hospitalization, Number of Case Outcomes, Number of Full Vaccinations)
+Covid Outbreak Status(Number of Positive COVID Cases, Number of Recovered COVID Cases, Number of Tests, Number of Hospitalization, Number of Case Outcomes, Number of Full Vaccinations)
 per Location, per Day, per Individual Profile Classification
 
 ### Fact Table Attributes
@@ -106,7 +107,7 @@ per Location, per Day, per Individual Profile Classification
 
 - Daily Weather Data Toronto [(Link)](https://climate.weather.gc.ca/climate_data/hourly_data_e.html?hlyRange=2009-12-10%7C2021-01-31&dlyRange=2010-02-02%7C2021-01-31&mlyRange=%7C&StationID=48549&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=2020&EndYear=2021&selRowPerPage=25&Line=2&searchMethod=contains&Month=1&Day=31&txtStationName=toronto&timeframe=1&Year=2021)
 
-
+\newpage
 
 ### Domain and Sample Values
 
@@ -147,7 +148,7 @@ per Location, per Day, per Individual Profile Classification
 | Total doses given to fully vaccinated individuals: Int | Number of doses issued to fully vaccinated individuals. Minimum= 0. | 0 |
 | Current hospitalizations: Int | Number of patients currently hospitalized with COVID-19 as measured on "Reported Date". Minimum= 0. | 1158 |
 | Current Tests Under investigation: Int | Number of tests pending results as measured on "Reported Date". | 71526 |
-| Test outcomes |  |  |
+| Test outcomes: Int| Completed tests| 1900 |
 | Reporting Date: Date | Reporting date of Ontario COVID-19 daily summary. | 2021-01-01 |
 | Current Patients in ICUs: Int | Number of patients currently in an Intensive Care Unit (ICU) with COVID-19 as measured on "Reported Date". Minimum= 0. | 336 |
 | Current Patients in ICUs on Ventilators: Int | Number of patients currently in an Intensive Care Unit (ICU), on a ventilator with COVID-19 as measured on "Reported_Date". Minimum= 0. | 221 |
@@ -170,7 +171,7 @@ per Location, per Day, per Individual Profile Classification
 | Number Recovered: Int	| Number of recovered cases pending results as measured on Date dimension. Minimum = 0. |	158472 |
 | Number of Tests:Int |	Number of tests issued as measured on Date dimension. Minimum = 0. |	61401 |
 | Restriction Zones: String |	Restriction issued, measured on Date dimension. Values include: “Control”, “Lockdown”, “Protect”, “Restrict”, ”Other” |	“Lockdown” |
-| Total Case Outcomes | | | 		
+| Total Case Outcomes: Int| Increase in test outcomes retrieved(ie. completed test results) Minimum= 0 | 19000 | 		
 | Date ID (FK): Int	| Minimum = 0. |	101 |
 | Weather Forecast ID (FK): Int | Minimum = 0. |	2 |
 | Location ID (FK): Int |	Minimum = 0. |	1 |
