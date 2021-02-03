@@ -1,51 +1,26 @@
-# Covid-19 Tracking and Lifestyle Trends Data Mart: Conceptual Modelling
+---
+output:
+  pdf_document: 
+    includes:
+        before_body: CoverPage.sty
+---
 
-## Questions to be Answered
-
-1. What were the trends, in terms of the number of cases, over time? (Our aim is
-obtaining profiles of individuals, by age and gender, who tested positive for
-Covid-19; distinguishing between travel-related and other cases (if known);
-tracking outbreaks; exploring the types and availability of testing facilities; etc.)
-
-2. Was there any interplay between special events (e.g., Thanksgiving or Canada
-Day) and the number of cases? (It should be noted that there is typically a delay
-between increased social interactions and an upsurge in positive Covid-19 tests.)
-
-3. How did lockdown measures, such as stay at home orders or school closures,
-affect the number of cases? Did specific government announcements or
-restrictions lead to downward trends in the number of cases? (The effectiveness
-of specific government measures on the outbreak is of importance here. It should
-again be noted that there is typically a delay between restrictions and a
-decreased in positive Covid-19 tests.)
-
-4. What were the trends in behaviours, in terms of the locations people visited and
-the duration they stayed? Did the weather have any impact on these trends? For
-instance, studies suggested that many Canadians started bicycling, walking, or
-visiting parks during the summer. (This question speaks to the mapping of
-potential changes in citizens’ lifestyles. Note that mobility data are available
-online from e.g., the google mobility repository and that weather data may be
-obtained from Environment and Climate Change Canada.) 
-
-
-TODO :
-
-- Declare the Grain (Todo once the fact table is fully completed)
-- Add the attribute description for the fact table facts and the dimensional attributes (e.g., Age: integer, minimum = 0 and maximum = 130, Sample value = 35).
+(See Last Page for Conceptual Model Figure)
 
 ## Fact Table
 
 ### Grain
-
-Per day
+Covid Outbreak Status(Number of Positive COVID Cases, Number of Recovered COVID Cases, Number of Recovered COVID Cases, Number of Tests, Number of Hospitalization, Number of Case Outcomes, Number of Full Vaccinations)
+per Location, per Day, per Individual Profile Classification
 
 ### Fact Table Attributes
 
 #### Foreign Keys
-- Date ID (FK)
+- Date ID (FK) 
 - Weather Forecast ID (FK)
 - Location ID (FK)
 - Mobility Trend ID (FK)
-- Covid Info ID (FK)
+- COVID Outbreak Status ID (FK)
 - Individual Profile (FK)
 
 #### Facts/Measures
@@ -53,8 +28,10 @@ Per day
 - Number of Postive Cases
 - Number Recovered
 - Number of Tests
-- Restriction Zones (Protect, Restrict, Lockdown) 
-- total case outcomes (resolutions and deaths)
+- Total Hospitalization
+- Total case outcomes (resolutions and deaths)
+- Number of full Vaccinations
+- Net Mobility Trend Change
 
 ## Dimensions 
 - Weather Dimension
@@ -62,27 +39,25 @@ Per day
   - Location
   - Date(Day)
 - Date Dimension
-  - Date Stamp
+  - Date Stamp (date, minimum = 0001-01-01 and maximum = 9999-12-31, Sample value = 2020-10-01)
   - Day of the week
-  - Month
   - Holiday (y/n)
 - Location Dimension 
-  - Median Income
-  - Population Density
   - Available Testing Locations
   - Public Health Units
+  - Restriction Status
 - Individual Profile
   - Age Group
   - Gender
   - Case Acquisition
 - Mobility Trend
-  - retail_and_recreation_percent_change_from_baseline	
-  - grocery_and_pharmacy_percent_change_from_baseline	
-  - parks_percent_change_from_baseline	
-  - transit_stations_percent_change_from_baseline	
-  - workplaces_percent_change_from_baseline	
-  - residential_percent_change_from_baseline
-- Covid Information
+  - retail and recreation percent change from baseline	
+  - grocery and pharmacy percent change from baseline	
+  - parks percent change from baseline	
+  - transit stations percent change from baseline	
+  - workplaces percent change from baseline	
+  - residential percent change from baseline
+- COVID Outbreak Status
   - reporting date
   - individuals fully vaccinated
   - current hospitalizations
@@ -96,7 +71,7 @@ Per day
 
 ### DataSets Used 
 
-- [Status of COVID-19](https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario)
+- Status of COVID-19 [(Link)](https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario)
   - reporting date
   - daily tests completed
   - total tests completed
@@ -108,7 +83,7 @@ Per day
   - current patients in Intensive Care Units (ICUs) on ventilators
   - change in number of cases from previous day by Public Health Unit (PHU)
 
-- [COVID-19 testing locations](https://data.ontario.ca/dataset/covid-19-assessment-centre-locations)
+- COVID-19 testing locations [(Link)](https://data.ontario.ca/dataset/covid-19-assessment-centre-locations)
   - Location name
   - Location operator
   - Physical address
@@ -118,50 +93,66 @@ Per day
   - Latitude
   - Longitude
   - Physical address
-Phone number
-Hours of operation
-Age restrictions
-Appointment requested
-Drive through availability
-Walk in availability
-Temporary closure
-Active centre (indefinite closures
+  - Phone number
+  - Hours of operation
+  - Age restrictions
+  - Appointment requested
+  - Drive through availability
+  - Walk in availability
+  - Temporary closure
+  - Active centre (indefinite closures
 
-- [Confirmed positive cases of COVID-19 in Ontario](https://data.ontario.ca/en/dataset/confirmed-positive-cases-of-covid-19-in-ontario)
+- Confirmed positive cases of COVID-19 in Ontario [(Link)](https://data.ontario.ca/en/dataset/confirmed-positive-cases-of-covid-19-in-ontario)
+  - approximation of onset date
+  - age group
+  - patient gender
+  - case acquisition information
+  - patient outcome
+  - reporting Public Health Unit (PHU)
+  - postal code, website, longitude, and latitude of PHU
 
-approximation of onset date
-age group
-patient gender
-case acquisition information
-patient outcome
-reporting Public Health Unit (PHU)
-postal code, website, longitude, and latitude of PHU
+- COVID-19 Vaccine Data in Ontario [(Link)](https://data.ontario.ca/dataset/covid-19-vaccine-data-in-ontario)
+  - daily doses administered
+  - total doses administered
+  - individuals fully vaccinated
+  - total doses given to fully vaccinated individuals
 
-- [COVID-19 Vaccine Data in Ontario](https://data.ontario.ca/dataset/covid-19-vaccine-data-in-ontario)
+- Community Mobility Reports [(Link)](https://www.google.com/covid19/mobility/)
 
-daily doses administered
-total doses administered
-individuals fully vaccinated
-total doses given to fully vaccinated individuals
+- Restrictions [(Link)](https://data.ontario.ca/dataset/ontario-covid-19-zones/resource/ce9f043d-f0d4-40f0-9b96-4c8a83ded3f6)
+  - Reporting PHU
+  - Status PHU
+  - Start Date
+  - End Date
+  - PHU url
 
-- [Community Mobility Reports](https://www.google.com/covid19/mobility/)
+- Daily Weather Data Ottawa [(Link)](https://climate.weather.gc.ca/climate_data/daily_data_e.html?hlyRange=%7C&dlyRange=1889-11-01%7C2021-01-07&mlyRange=1889-01-01%7C2006-12-01&StationID=4333&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=1840&EndYear=2021&selRowPerPage=25&Line=7&searchMethod=contains&Month=12&Day=31&txtStationName=Ottawa&timeframe=2&Year=2020)
+  - TIME
+  - Temp °C
+  - Dew Point °C
+  - Rel Hum %
+  - Precip. Amount mm
+  - Wind Dir (10's deg)
+  - Wind Spd km/h
+  - Visibility km
+  - Stn Press (kPa)
+  - Hmdx
+  - Wind Chill
+  - Weather
 
-retail_and_recreation_percent_change_from_baseline	
-grocery_and_pharmacy_percent_change_from_baseline	
-parks_percent_change_from_baseline	
-transit_stations_percent_change_from_baseline	
-workplaces_percent_change_from_baseline	
-residential_percent_change_from_baseline
+- Daily Weather Data Toronto [(Link)](https://climate.weather.gc.ca/climate_data/hourly_data_e.html?hlyRange=2009-12-10%7C2021-01-31&dlyRange=2010-02-02%7C2021-01-31&mlyRange=%7C&StationID=48549&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=2020&EndYear=2021&selRowPerPage=25&Line=2&searchMethod=contains&Month=1&Day=31&txtStationName=toronto&timeframe=1&Year=2021)
+  - TIME
+  - Temp °C
+  - Dew Point °C
+  - Rel Hum %
+  - Precip. Amount mm
+  - Wind Dir (10's deg)
+  - Wind Spd km/h
+  - Visibility km
+  - Stn Press (kPa)
+  - Hmdx
+  - Wind Chill
+  - Weather
 
 
-- [Restrictions](https://data.ontario.ca/dataset/ontario-covid-19-zones/resource/ce9f043d-f0d4-40f0-9b96-4c8a83ded3f6)
-
-
-- [Daily Weather Data Ottawa](https://climate.weather.gc.ca/climate_data/daily_data_e.html?hlyRange=%7C&dlyRange=1889-11-01%7C2021-01-07&mlyRange=1889-01-01%7C2006-12-01&StationID=4333&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=1840&EndYear=2021&selRowPerPage=25&Line=7&searchMethod=contains&Month=12&Day=31&txtStationName=Ottawa&timeframe=2&Year=2020
-
-
-- [Daily Weather Data Toronto](https://climate.weather.gc.ca/climate_data/hourly_data_e.html?hlyRange=2009-12-10%7C2021-01-31&dlyRange=2010-02-02%7C2021-01-31&mlyRange=%7C&StationID=48549&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=2020&EndYear=2021&selRowPerPage=25&Line=2&searchMethod=contains&Month=1&Day=31&txtStationName=toronto&timeframe=1&Year=2021)
-
-- [Draw.io Dimensional Model Link](https://app.diagrams.net/#G1-83h25prj8AZheJhxnOIoCWB9A89NY1j)
-
-- [Draw.io Dimensional Model Exported Link](https://viewer.diagrams.net/?highlight=0000ff&edit=_blank&layers=1&nav=1&title=COVID%20Trends.drawio#R7V1bd9q4Fv41WavnoVm%2BA4%2BBNJeZZMqkadLpS5ZiC9CJsahsSOivny1fAFsyGGKbDLgPKZKv0vdpa98kn%2Bi98dslQ5PRLXWwe6IpztuJfn6iaapltuA%2FXjOPaqyWFlUMGXHik5YV38hvHFcqce2UONhPnRhQ6gZkkq60qedhO0jVIcboa%2Fq0AXXTT52gIRYqvtnIFWsfiROMotq21lrWX2EyHCVPVq1OdGSMkpPjlvgj5NDXlSr9y4neY5QG0a%2FxWw%2B7vPOSfnm8nj%2B6Ny%2FW5R9%2F%2B7%2FQ9%2B6f9389fI5udrHNJYsmMOwFO9%2F698vg4urB%2BP%2BPSf%2Fi71fl8uz5j8%2FxJcoMudO4v27pM3FJMIfae3ieE7c9mCcd6r%2BSsYs8KHUH1Au%2BxUegO7rIJUMPftvwnphBxQyzgAAWZ%2FGBgE6g1h4R17lBczrlrfEDZL8kpe6IMvIbbotcOKRCBRxmQUwrzUqd8Y1fCdUK1DLswzn9pIvURdUN8oP4HJu6Lpr45Dl8YX7KGLEh8bo0COg4uRGdeg524tIC87AQMPqyYBG%2FviAwMYC8N%2FDbCi1joC4xHeOA8S6PjyaUi8ecocRj7nXJYD0ZYKMV9sJ4jUdOPGqGi1svnnYHowx5Q%2BiD5eP09PNUQxGep1qy52Ueh1zA3UMB7vJe9Ff5CD9WWrqsClm6BWMNgbECQ10SsnMUjJckyiKXUNXFg0BC1DFxHH67rj9BNvGG95y455%2FVZc1NeOG5vqy5i%2FtFD1kUoABFROPUcdEzdvvUJwGh%2FP4sOrc7ocQLws4zuyfmeVjDgh714I0RCUmFgcCvmJNYQre1g3oz3eZpGDfRq51PrhTM22JqrpNC11BWPvX%2F%2FJ%2BAM7Qu2AxlJHPSqBkiaryKwrUDNxzvIyAA9iRIphHrQi%2F1lFOTY6f1oKwuy3uDUzcKSos1wuJdeOoCngwHiLhPyHOeGLYZRnwcPE0w41PFkz0CgYSfBoyOn56Rj8MBzN9O7yy66YBwXzPFxDJLqZAdlijb62WHJrBjyKiN2Tykx2SE2BjZ8w3kaChRIiXaBeV%2FGZTwlcu%2B9%2FzrgQxvkfH4xf7Z1y4%2BtwVKQCNf%2FEZAbGaDgHJRguSyQVWLaptV0aEj0AF6yQPl6QmsAT5zNMzYDzP09p6ZoYoG6ytlLxMX2bghxX5IYdWobspJoQqk4LY%2F9HtAkNsoEjVyobNv5VJtCVzofX24BtO9w21Jb0BBuwyN8IJ%2BLaXxa5Xo17Ji1WLhTJbwpWWJfNETj9h2ji3T%2FO84tlRR6znhrVbOwXLmfehQH%2Fv8nZwx8YgPL4RF7%2Bwxya%2BNwmohDN7lCZPxsTrjWFRwIhZcew6ZEWeKXM6BwdQNOTFDNgAGvGyYUDITTIkRVC8TRK0mYsI95bPIUh4MyQyw4GG1HGIoZJU7DU3KpElLYhHVSxPR2SpgfOwBke1hVRWJUSPDtYSQiNymydMGelMWthZeg%2FoTAqKA%2FI58Ikc9tHexZSJabOcHq2psS0kgUQaW8N9DJ3Hx%2Fx36iIVCfgY1ZCi3bhouvI8LMs9XvVzIVQd4B2kKmJk2PKqRAmUjL3Nv1Yu8GDALXRqxP%2BPkkEPk%2BwZf5s%2BqFXxDzI24w7zHAJfQNxA0PsySQV8kUe0PdGvNvN%2BHCR574dRPuNl33fveCP2yKWDsW%2FUzJH7sDRRQuNqnPPCoh4sCyhpWlM0Ka99KoCEmSvTCqFbCBG86fg6tATqAPzaKPEQ85MXbz%2FCM0CmvcRBv1zP%2F058%2Bu8SGH1cYudAsblGQoOFOydzp1KhGPpqD3sy7GzOF%2FKSzF1%2B%2F%2FHInSfWWKg9Nenf1YTC9lQ5LSaJg0qiU2topCvZB07ulLJVZucfrzVw7kN8T1JLCXYIvU%2FrCov0aSR4FRvh4cnAzTVUwStK6C43a0nAUrZLzUI0IdY1HjF8aKHfPwa4XStG6uIU5d9QAuHvGdL0AiobAFXVJpNZ%2Fgj8X3uE5A6sCUxboqQxNqV0nk6zhDHm4nt0ckIriu1WkpjIwr1quZT2oAbl4NB06eWh9vexJVNgbasdROUXAsbG3qre3Wmba%2FtGMU7MYSRam0kFYXFK6itq5wNEjsrjWjuiPaHFJX1hcJN2nk6mbCKFzzBfTzA90TikfzjotL%2Bkbi0HAsxkibtiLUQZAFA5MJprDc%2F1XBW2dlpj0jUXVT%2B6QbyD9iLaZVJsXjesVBfDINfp8iD%2BweSaGTh4xCkY80NZo8xu0%2BU0WXq6Cn6vNW0ZGuS464Bem4UEo8%2FK04aNX5jfwLX98fwRlXp7%2Fly99lAvKsM0H8VFOJjuAWacqL309cbmGu1AOGgwLYVinzi5PwxEwjN21nxw0P1LFbgcc966oi2a1TLIeu8q%2BA7L7V9lVUc4uV9BCfZ%2FRAXELpz8d8S4A1SvwhmQRZZne%2BA%2B6C4CctxLXbULVRhDlDvR3K%2B%2FVCSKJ7zbM172EsXh4yU8lptnuArdk1X7NcIv%2B3EscrdBskC4T6aJzRnVIS1ZoIJ%2BP7LNfUxL7MhrQSwVdtiy%2FZtTFxCsB5MbDtjWuekGNrCofmy6KbQFWEONn%2FIMEUPJoFmFoPpv%2FiHs7LPzDCzCs4uL52%2BrB83lSeiPBj%2BQe8HvlKigtL%2BKF5JrozbAjfPigWN6MT6fMji9dF5IE02SI14GqmXJQV0A0JRgmdQzzhIRZuhFrNPs%2B5%2BpSq89ukq9ljYOonfFVS36IN8qsxlgs%2Bk1uFHWEcKOyVH5dnEi25F7MoSVv%2FlmljZRDu%2FK1RO6t27v4g3NPbWcs2HbntLP6bzcm6plIk5Hd9a5qJhaY3AoxcRtp9gGYKGdYUTGo7pWKptY67WjK4p%2BaYpDeUk6t1ruJaWU8KGbdxJTthrTT9KzuNj3DmVorRWpFaa%2BnNRT6mBFoOncW1iI8E5Nks%2FTMWaxaD2WNjp5mU6dzquvvJqlpZaRndrVkDkmBNeGyieS0WCfOH3EZ4W%2FGz1lyPrpjqSMgUW5qHwHv4uzehGJmItU1PT0%2FGztSTFdS92mnnqIqnVPLUgRZXDL%2FLKWVeqxmGOnH6jXQsUCiySHaS2t00QJiN8cIrmlMJB8RS8aEyScxLY%2BshVWDbDCnbYLGoecJ84oVBclumMleWeHX7PjeFxfIDvfPi7KnM6RtEviqj%2F9ltz8ADhVdj7PjPuD%2FpRQ%2BrfnC3S4eRq2cOGBlDsa87VfioO5FE9QtDubek%2Fi0rTKHGmy3wHbvyX2aGAoQlm80iG6B6N7T%2FDTZbheZ74s2iG6B6P7T%2B5L9GTftidvAug2sdW6dIIe1aNZmg%2Bx2yEo2sa5ZBouhpb9Se1VGpsOMY9uLtq1swC0IrmST6prBFcMzC3DBGucdfYAfKKoMUNkG1DUvUhLdu%2BnRGn98okG0IKKS%2FaRrRlRUmO6g0YzYsWHzk3qN0N3Gn7R3XUn0EyZfBovzUL8e6idBqkNVsktzWahCkVEarDqLGZqMbqmD%2BRn%2FAg%3D%3D)
+![Conceptual Model](ConceptualModel.png "ConceptualModel")
