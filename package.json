@@ -1,0 +1,38 @@
+{
+  "name": "covid19-datamart",
+  "version": "1.0.0",
+  "description": "A Data mart to map details of individuals who tested for Covid-19 as well as the lifestyle changes of Canadians.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json",
+    "task": "NODE_PATH=./src TS_NODE_PROJECT=./tsconfig.json ts-node -r tsconfig-paths/register ./src/database/maintenance/run-task.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Youssef-Mak/covid19-datamart.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.15",
+    "pg": "^8.2.1",
+    "ts-node": "^8.10.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.153",
+    "@types/pg": "^7.14.3",
+    "pg-camelcase": "^0.0.3",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.3"
+  },
+  "_moduleAliases": {
+    "@covid19-datamart": "dist"
+  },
+  "bugs": {
+    "url": "https://github.com/Youssef-Mak/covid19-datamart/issues"
+  },
+  "homepage": "https://github.com/Youssef-Mak/covid19-datamart#readme"
+}
