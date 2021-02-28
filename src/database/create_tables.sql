@@ -1,4 +1,4 @@
-set schema 'Covid19DataMart';
+SET SCHEMA 'Covid19DataMart';
 
 -- Create Types
 
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS patient_dimension (
     primary key (patient_dim_key)
 );
 
-create table phu_dimension (
+CREATE TABLE IF NOT EXISTS phu_dimension (
     phu_dim_key serial not null,
     phu_name varchar,
     address varchar,
