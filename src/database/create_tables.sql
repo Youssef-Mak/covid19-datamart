@@ -25,20 +25,6 @@ BEGIN
     END IF;
 END$$;
 
-DO $$
-BEGIN
-    IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'agegroup') THEN
-        CREATE TYPE agegroup AS ENUM (
-            'children', -- 0 to 14
-            'youth', -- 15 to 24
-            'adults', -- 25 to 64
-            'seniors' -- 65 over
-        );
-    END IF;
-END$$;
-
-
-
 -- Dimensional Tables
 
 CREATE TABLE IF NOT EXISTS date_dimension (
@@ -66,7 +52,7 @@ CREATE TABLE IF NOT EXISTS date_dimension (
 CREATE TABLE IF NOT EXISTS patient_dimension (
     patient_dim_key serial not null,
     gender gender,
-    age_group agegroup,
+    age_group varchar(4),
     acquisition_group varchar,
     outbreak_related boolean,
     primary key (patient_dim_key)

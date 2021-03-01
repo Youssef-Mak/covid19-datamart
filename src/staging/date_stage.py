@@ -8,7 +8,7 @@ can_holidays = holidays.Canada()
 us_holidays = holidays.UnitedStates()
 
 curr_dir = os.path.abspath(os.path.dirname(sys.argv[0]) or '.')
-date_csv_path = os.path.join(curr_dir, './../../data/date_dimension.csv')
+date_csv_path = os.path.join(curr_dir, './../../data/dimensions/date_dimension.csv')
 
 
 def get_season(date):
@@ -31,7 +31,7 @@ def get_season(date):
     return s
 
 
-def gen_full_date(df):
+def gen_date_df(df):
     sdate = date(2019, 11, 1)   # start date
     edate = date(2021, 2, 15)   # end date
 
@@ -61,7 +61,7 @@ def gen_full_date(df):
     return df
 
 
-def generate_dates():
+def generate_dates_dim():
     date_df_columns = [
             "full_date",
             "day",
@@ -83,5 +83,5 @@ def generate_dates():
             ]
     date_df = pd.DataFrame(columns=date_df_columns)
 
-    date_df = gen_full_date(date_df)
+    date_df = gen_date_df(date_df)
     date_df.to_csv(date_csv_path, encoding='utf-8', index=False)

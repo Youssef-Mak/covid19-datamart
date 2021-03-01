@@ -1,5 +1,6 @@
 import argparse
-from date_stage import generate_dates
+from date_stage import generate_dates_dim
+from patient_stage import generate_patients_dim
 
 def main():
     parser = argparse.ArgumentParser()
@@ -8,7 +9,9 @@ def main():
     args = parser.parse_args()
 
     if args.dimension == 'date':
-        generate_dates()
+        generate_dates_dim()
+    elif args.dimension == 'patient':
+        generate_patients_dim()
     else:
         return
 
