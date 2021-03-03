@@ -2,6 +2,7 @@ import argparse
 from date_stage import generate_dates_dim
 from patient_stage import generate_patients_dim
 from mobility_dimension_stage import generate_mobility_dim
+from weather_stage import generate_weather_dim
 
 def main():
     parser = argparse.ArgumentParser()
@@ -15,6 +16,8 @@ def main():
         generate_patients_dim()
     elif args.dimension == 'mobility':
         generate_mobility_dim()
+    elif args.dimension == 'weather':
+        generate_weather_dim()
     else:
         return
 
