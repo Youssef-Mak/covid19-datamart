@@ -3,6 +3,7 @@ from phu_stage import generate_phu_dim
 from date_stage import generate_dates_dim
 from patient_stage import generate_patients_dim
 from mobility_dimension_stage import generate_mobility_dim
+from weather_stage import generate_weather_dim
 
 
 def main():
@@ -21,6 +22,8 @@ def main():
         generate_mobility_dim()
     elif args.dimension == 'phu':
         generate_phu_dim()
+    elif args.dimension == 'weather':
+        generate_weather_dim()
     else:
         return
 
