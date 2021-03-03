@@ -1,0 +1,35 @@
+phu_name,address,city,postal_code,url,latitude,longitude,phu_dim_key
+Halton Region Health Department,1151 Bronte Road,Oakville,L6M 3Ll,www.halton.ca/For-Residents/Public-Health/ ,43.41399692,-79.74479581,0
+Peel Public Health,7120 Hurontario Street,Mississauga,L5W 1N4,www.peelregion.ca/health/,43.6474713,-79.7088933,1
+Grey Bruce Health Unit,101 17th Street East,Owen Sound,N4K 0A5,www.publichealthgreybruce.on.ca/,44.57619612,-80.94097993,2
+"Kingston, Frontenac and Lennox & Addington Public Health",221 Portsmouth Avenue,Kingston,K7M 1V5,www.kflaph.ca,44.2278735,-76.5252108,3
+Wellington-Dufferin-Guelph Public Health,160 Chancellors Way,Guelph,N1G 0E1,www.wdgpublichealth.ca,43.5248813,-80.2337433,4
+Toronto Public Health,"277 Victoria Street, 5th Floor",Toronto,M5B 1W2,www.toronto.ca/community-people/health-wellness-care/,43.65659125,-79.37935801,5
+Hamilton Public Health Services,"110 King St. West, 2nd Floor",Hamilton,L8P 4S6,www.hamilton.ca/publichealth,43.2576311,-79.87134089,6
+Niagara Region Public Health Department,1815 Sir Isaac Brock Way,Thorold,L2V 4T7,www.niagararegion.ca/health,43.1165366,-79.2412197,7
+Lambton Public Health,160 Exmouth Street,Point Edward,N7T 7Z6,www.lambtonhealth.on.ca,42.98641646,-82.40480836,8
+"Region of Waterloo, Public Health",99 Regina Street South,Waterloo,N2J 4V3,www.regionofwaterloo.ca,43.46287573,-80.52091315,9
+Simcoe Muskoka District Health Unit,15 Sperling Drive,Barrie,L4M 6K9,www.simcoemuskokahealth.org,44.41071258,-79.68630597,10
+York Region Public Health Services,17250 Yonge Street,Newmarket,L3Y 6Z1,www.york.ca/wps/portal/yorkhome/health/ ,44.048023,-79.480239,11
+Durham Region Health Department,605 Rossland Road East,Whitby,L1N 0B2,www.durham.ca/en/health-and-wellness/health-and-wellness.aspx,43.898605,-78.940341,12
+Renfrew County and District Health Unit,7 International Drive,Pembroke,K8A 6W5,www.rcdhu.com,45.799406,-77.118727,13
+Thunder Bay District Health Unit,999 Balmoral Street,Thunder Bay,P7B 6E7,www.tbdhu.com,48.4005716,-89.2588508,14
+"Haliburton, Kawartha, Pine Ridge District Health Unit",200 Rose Glen Road,Port Hope,L1A 3V6,www.hkpr.on.ca/,43.96817279,-78.28579239,15
+Porcupine Health Unit,169 Pine Street South,Timmins,P4N 8B7,www.porcupinehu.on.ca,48.47251,-81.32875,16
+North Bay Parry Sound District Health Unit,345 Oak Street West,North Bay,P1B 2T2,www.myhealthunit.ca ,46.31320706,-79.4678405,17
+Haldimand-Norfolk Health Unit,12 Gilbertson Drive,Simcoe,N3Y 4N5,www.hnhu.org,42.84782526,-80.30381491,18
+Ottawa Public Health,100 Constellation Drive,Ottawa,K2G 6J8,www.ottawapublichealth.ca,45.3456651,-75.7639122,19
+Middlesex-London Health Unit,50 King Street,London,N6A 5L7,www.healthunit.com,42.98146842,-81.25401572,20
+Eastern Ontario Health Unit,1000 Pitt Street,Cornwall,K6J 5T1,www.eohu.ca,45.02915233,-74.73629779,21
+Windsor-Essex County Health Unit,1005 Ouellette Avenue,Windsor,N9A 4J8,www.wechu.org,42.3087965,-83.0336705,22
+Southwestern Public Health,1230 Talbot Street,St. Thomas,N5P 1G9,www.swpublichealth.ca,42.77780366,-81.15115646,23
+Peterborough Public Health,185 King Street,Peterborough,K9J 2R8,www.peterboroughpublichealth.ca,44.30163229,-78.32134748,24
+Northwestern Health Unit,210 First Street North ,Kenora,P9N 2K4,www.nwhu.on.ca,49.76961482,-94.48825435,25
+Huron Perth District Health Unit,653 West Gore Street,Stratford,N5A 1L4,www.hpph.ca,43.3686615,-81.00191283,26
+"Leeds, Grenville and Lanark District Health Unit",458 Laurier Boulevard,Brockville,K6V 7A3,www.healthunit.org,44.61584261,-75.70283308,27
+Brant County Health Unit,194 Terrace Hill Street,Brantford,N3R 1G7,www.bchu.org/,43.151811,-80.27437415,28
+Hastings and Prince Edward Counties Health Unit,179 North Park Street,Belleville,K8P 4P1,www.hpePublicHealth.ca,44.18667362,-77.39144554,29
+Chatham-Kent Health Unit,435 Grand Avenue West,Chatham,N7M 5L8,www.ckphu.com,42.403861,-82.208561,30
+Sudbury & District Health Unit,1300 Paris Street,Sudbury,P3E 3A3,www.phsd.ca,46.46609195,-80.99805884,31
+Algoma Public Health Unit,294 Willow Avenue,Sault Ste. Marie,P6B 0A9,www.algomapublichealth.com,46.5323728,-84.3148358,32
+Timiskaming Health Unit,"247 Whitewood Avenue, Unit 43",New Liskeard,P0J 1P0,www.timiskaminghu.com,47.5092835,-79.681632,33
