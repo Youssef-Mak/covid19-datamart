@@ -14,6 +14,8 @@ weather_csv_path = os.path.join(curr_dir, './../../data/dimensions/weather_dimen
 
 def generate_weather_df():
     weather_df = raw_climate_ottawa_df.append(raw_climate_toronto_df)
+    weather_df.insert(0, 'Weather_key', range(len(weather_df)))
+
     return weather_df.rename(columns={"Max Temp (°C)": "Daily high temperature", "Min Temp (°C)": "Daily low temperature", "Total Precip (mm)": "Precipitation"})
 
 def generate_weather_dim():
