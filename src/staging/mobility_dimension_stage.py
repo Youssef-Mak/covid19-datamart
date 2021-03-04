@@ -17,9 +17,12 @@ def gen_mobility_df():
 
     mobility_df["metro-area"] = np.where(mobility_df["subregion"] ==
                                          "Ottawa Division", "National Capital Region", "Greater Toronto Area")
+    
 
-    return mobility_df[mobility_df["subregion"].isin(["Ottawa Division", "Toronto Division"])]
-
+    mobility_df = mobility_df[mobility_df["subregion"].isin(["Ottawa Division", "Toronto Division"])]
+    mobility_df.insert(0, 'Mobility_key', range(len(mobility_df)))
+    
+    return mobility_df
 
 def generate_mobility_dim():
     mobility_dimension = gen_mobility_df()

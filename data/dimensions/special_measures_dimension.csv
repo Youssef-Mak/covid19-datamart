@@ -1,0 +1,160 @@
+Measures_key,Keyword_1,Keyword_2,Title,start_date,end_date,Description
+0,Algoma Public Health Unit,2226,Prevent,2020-11-07T00:00:00,2020-12-25T00:00:00,http://www.algomapublichealth.com/
+1,Algoma Public Health Unit,2226,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.algomapublichealth.com/
+2,Algoma Public Health Unit,2226,Protect,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.algomapublichealth.com/
+3,Brant County Health Unit,2227,Protect,2020-11-07T00:00:00,2020-11-15T00:00:00,http://www.bchu.org/
+4,Brant County Health Unit,2227,Restrict,2020-11-16T00:00:00,2020-12-20T00:00:00,http://www.bchu.org/
+5,Brant County Health Unit,2227,Control,2020-12-21T00:00:00,2020-12-25T00:00:00,http://www.bchu.org/
+6,Brant County Health Unit,2227,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.bchu.org/
+7,Brant County Health Unit,2227,Restrict,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.bchu.org/
+8,Chatham-Kent Health Unit,2240,Prevent,2020-11-07T00:00:00,2020-11-22T00:00:00,http://ckphu.com/
+9,Chatham-Kent Health Unit,2240,Protect,2020-11-23T00:00:00,2020-12-25T00:00:00,http://ckphu.com/
+10,Chatham-Kent Health Unit,2240,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://ckphu.com/
+11,Chatham-Kent Health Unit,2240,Control,2021-02-16T00:00:00,2021-02-28T00:00:00,http://ckphu.com/
+12,Chatham-Kent Health Unit,2240,Restrict,2021-03-01T00:00:00,2021-03-15T00:00:00,http://ckphu.com/
+13,Durham Region Health Department,2230,Protect,2020-11-07T00:00:00,2020-11-15T00:00:00,https://www.durham.ca/en/health-and-wellness/health-and-wellness.aspx
+14,Durham Region Health Department,2230,Restrict,2020-11-16T00:00:00,2020-11-22T00:00:00,https://www.durham.ca/en/health-and-wellness/health-and-wellness.aspx
+15,Durham Region Health Department,2230,Control,2020-11-23T00:00:00,2020-12-25T00:00:00,https://www.durham.ca/en/health-and-wellness/health-and-wellness.aspx
+16,Durham Region Health Department,2230,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,https://www.durham.ca/en/health-and-wellness/health-and-wellness.aspx
+17,Durham Region Health Department,2230,Control,2021-02-16T00:00:00,2021-03-07T00:00:00,https://www.durham.ca/en/health-and-wellness/health-and-wellness.aspx
+18,Eastern Ontario Health Unit,2258,Protect,2020-11-07T00:00:00,2020-11-15T00:00:00,http://www.eohu.ca/
+19,Eastern Ontario Health Unit,2258,Restrict,2020-11-16T00:00:00,2020-11-22T00:00:00,http://www.eohu.ca/
+20,Eastern Ontario Health Unit,2258,Protect,2020-11-23T00:00:00,2020-12-13T00:00:00,http://www.eohu.ca/
+21,Eastern Ontario Health Unit,2258,Restrict,2020-12-14T00:00:00,2020-12-25T00:00:00,http://www.eohu.ca/
+22,Eastern Ontario Health Unit,2258,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.eohu.ca/
+23,Eastern Ontario Health Unit,2258,Restrict,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.eohu.ca/
+24,Grey Bruce Health Unit,2233,Prevent,2020-11-07T00:00:00,2020-11-22T00:00:00,http://www.publichealthgreybruce.on.ca/
+25,Grey Bruce Health Unit,2233,Protect,2020-11-23T00:00:00,2020-12-25T00:00:00,http://www.publichealthgreybruce.on.ca/
+26,Grey Bruce Health Unit,2233,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.publichealthgreybruce.on.ca/
+27,Grey Bruce Health Unit,2233,Protect,2021-02-16T00:00:00,2021-02-28T00:00:00,http://www.publichealthgreybruce.on.ca/
+28,Grey Bruce Health Unit,2233,Prevent,2021-03-01T00:00:00,2021-03-15T00:00:00,http://www.publichealthgreybruce.on.ca/
+29,Haldimand-Norfolk Health Unit,2234,Protect,2020-11-07T00:00:00,2020-11-29T00:00:00,http://www.hnhu.org/
+30,Haldimand-Norfolk Health Unit,2234,Restrict,2020-11-30T00:00:00,2020-12-25T00:00:00,http://www.hnhu.org/
+31,Haldimand-Norfolk Health Unit,2234,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.hnhu.org/
+32,Haldimand-Norfolk Health Unit,2234,Restrict,2021-02-16T00:00:00,2021-02-28T00:00:00,http://www.hnhu.org/
+33,Haldimand-Norfolk Health Unit,2234,Protect,2021-03-01T00:00:00,2021-03-15T00:00:00,http://www.hnhu.org/
+34,"Haliburton, Kawartha, Pine Ridge District Health Unit",2235,Prevent,2020-11-07T00:00:00,2020-12-06T00:00:00,http://www.hkpr.on.ca/
+35,"Haliburton, Kawartha, Pine Ridge District Health Unit",2235,Protect,2020-12-07T00:00:00,2020-12-25T00:00:00,http://www.hkpr.on.ca/
+36,"Haliburton, Kawartha, Pine Ridge District Health Unit",2235,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.hkpr.on.ca/
+37,"Haliburton, Kawartha, Pine Ridge District Health Unit",2235,Restrict,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.hkpr.on.ca/
+38,Halton Region Health Department,2236,Protect,2020-11-07T00:00:00,2020-11-15T00:00:00,https://www.halton.ca/For-Residents/Public-Health
+39,Halton Region Health Department,2236,Control,2020-11-16T00:00:00,2020-12-25T00:00:00,https://www.halton.ca/For-Residents/Public-Health
+40,Halton Region Health Department,2236,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,https://www.halton.ca/For-Residents/Public-Health
+41,Halton Region Health Department,2236,Control,2021-02-16T00:00:00,2021-03-07T00:00:00,https://www.halton.ca/For-Residents/Public-Health
+42,Hamilton Public Health Services,2237,Protect,2020-11-07T00:00:00,2020-11-15T00:00:00,http://www.hamilton.ca/publichealth
+43,Hamilton Public Health Services,2237,Control,2020-11-16T00:00:00,2020-12-20T00:00:00,http://www.hamilton.ca/publichealth
+44,Hamilton Public Health Services,2237,Lockdown,2020-12-21T00:00:00,2021-12-25T00:00:00,http://www.hamilton.ca/publichealth
+45,Hamilton Public Health Services,2237,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.hamilton.ca/publichealth
+46,Hamilton Public Health Services,2237,Control,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.hamilton.ca/publichealth
+47,Hastings and Prince Edward Counties Health Unit,2238,Prevent,2020-11-07T00:00:00,2020-11-29T00:00:00,https://hpepublichealth.ca/
+48,Hastings and Prince Edward Counties Health Unit,2238,Protect,2020-11-30T00:00:00,2021-12-25T00:00:00,https://hpepublichealth.ca/
+49,Hastings and Prince Edward Counties Health Unit,2238,Stay-at-home,2020-12-26T00:00:00,2021-02-09T00:00:00,https://hpepublichealth.ca/
+50,Hastings and Prince Edward Counties Health Unit,2238,Prevent,2021-02-10T00:00:00,2021-03-07T00:00:00,https://hpepublichealth.ca/
+51,Huron Perth District Health Unit,5183,Prevent,2020-11-07T00:00:00,2020-11-15T00:00:00,http://www.hpph.ca/
+52,Huron Perth District Health Unit,5183,Protect,2020-11-16T00:00:00,2020-11-22T00:00:00,http://www.hpph.ca/
+53,Huron Perth District Health Unit,5183,Restrict,2020-11-23T00:00:00,2021-12-25T00:00:00,http://www.hpph.ca/
+54,Huron Perth District Health Unit,5183,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.hpph.ca/
+55,Huron Perth District Health Unit,5183,Restrict,2021-02-16T00:00:00,2021-02-28T00:00:00,http://www.hpph.ca/
+56,Huron Perth District Health Unit,5183,Protect,2021-03-01T00:00:00,2021-03-15T00:00:00,http://www.hpph.ca/
+57,"Kingston, Frontenac and Lennox & Addington Public Health",2241,Prevent,2020-11-07T00:00:00,2020-11-22T00:00:00,http://www.kflapublichealth.ca/
+58,"Kingston, Frontenac and Lennox & Addington Public Health",2241,Protect,2020-11-23T00:00:00,2020-12-20T00:00:00,http://www.kflapublichealth.ca/
+59,"Kingston, Frontenac and Lennox & Addington Public Health",2241,Restrict,2020-12-21T00:00:00,2021-12-25T00:00:00,http://www.kflapublichealth.ca/
+60,"Kingston, Frontenac and Lennox & Addington Public Health",2241,Stay-at-home,2020-12-26T00:00:00,2021-02-09T00:00:00,http://www.kflapublichealth.ca/
+61,"Kingston, Frontenac and Lennox & Addington Public Health",2241,Prevent,2021-02-10T00:00:00,2021-03-07T00:00:00,http://www.kflapublichealth.ca/
+62,Lambton Public Health,2242,Prevent,2020-11-07T00:00:00,2020-11-29T00:00:00,http://www.lambtonhealth.on.ca/
+63,Lambton Public Health,2242,Protect,2020-11-30T00:00:00,2021-12-25T00:00:00,http://www.lambtonhealth.on.ca/
+64,Lambton Public Health,2242,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.lambtonhealth.on.ca/
+65,Lambton Public Health,2242,Restrict,2021-02-16T00:00:00,2021-02-21T00:00:00,http://www.lambtonhealth.on.ca/
+66,Lambton Public Health,2242,Control,2021-02-22T00:00:00,2021-03-07T00:00:00,http://www.lambtonhealth.on.ca/
+67,"Leeds, Grenville and Lanark District Health Unit",2243,Prevent,2020-11-07T00:00:00,2020-12-13T00:00:00,http://www.healthunit.org/
+68,"Leeds, Grenville and Lanark District Health Unit",2243,Protect,2020-12-14T00:00:00,2021-12-25T00:00:00,http://www.healthunit.org/
+69,"Leeds, Grenville and Lanark District Health Unit",2243,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.healthunit.org/
+70,"Leeds, Grenville and Lanark District Health Unit",2243,Prevent,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.healthunit.org/
+71,Middlesex-London Health Unit,2244,Prevent,2020-11-07T00:00:00,2020-11-15T00:00:00,http://www.healthunit.com/
+72,Middlesex-London Health Unit,2244,Protect,2020-11-16T00:00:00,2020-12-06T00:00:00,http://www.healthunit.com/
+73,Middlesex-London Health Unit,2244,Restrict,2020-12-07T00:00:00,2020-12-13T00:00:00,http://www.healthunit.com/
+74,Middlesex-London Health Unit,2244,Control,2020-12-14T00:00:00,2021-12-25T00:00:00,http://www.healthunit.com/
+75,Middlesex-London Health Unit,2244,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.healthunit.com/
+76,Middlesex-London Health Unit,2244,Control,2021-02-16T00:00:00,2021-02-28T00:00:00,http://www.healthunit.com/
+77,Middlesex-London Health Unit,2244,Restrict,2021-03-01T00:00:00,2021-03-15T00:00:00,http://www.healthunit.com/
+78,Niagara Region Public Health Department,2246,Protect,2020-11-07T00:00:00,2020-11-15T00:00:00,http://www.niagararegion.ca/health
+79,Niagara Region Public Health Department,2246,Restrict,2020-11-16T00:00:00,2020-12-20T00:00:00,http://www.niagararegion.ca/health
+80,Niagara Region Public Health Department,2246,Control,2020-12-21T00:00:00,2021-12-25T00:00:00,http://www.niagararegion.ca/health
+81,Niagara Region Public Health Department,2246,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.niagararegion.ca/health
+82,Niagara Region Public Health Department,2246,Lockdown,2021-02-16T00:00:00,2021-02-28T00:00:00,http://www.niagararegion.ca/health
+83,Niagara Region Public Health Department,2246,Control,2021-03-01T00:00:00,2021-03-15T00:00:00,http://www.niagararegion.ca/health
+84,North Bay Parry Sound District Health Unit,2247,Prevent,2020-11-07T00:00:00,2021-12-25T00:00:00,http://www.myhealthunit.ca/
+85,North Bay Parry Sound District Health Unit,2247,Stay-at-home,2020-12-26T00:00:00,2021-03-07T00:00:00,http://www.myhealthunit.ca/
+86,Northwestern Health Unit,2249,Prevent,2020-11-07T00:00:00,2020-11-29T00:00:00,http://www.nwhu.on.ca/
+87,Northwestern Health Unit,2249,Protect,2020-11-30T00:00:00,2021-12-25T00:00:00,http://www.nwhu.on.ca/
+88,Northwestern Health Unit,2249,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.nwhu.on.ca/
+89,Northwestern Health Unit,2249,Protect,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.nwhu.on.ca/
+90,Ottawa Public Health,2251,Restrict,2020-11-07T00:00:00,2021-12-25T00:00:00,http://www.ottawapublichealth.ca/
+91,Ottawa Public Health,2251,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.ottawapublichealth.ca/
+92,Ottawa Public Health,2251,Restrict,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.ottawapublichealth.ca/
+93,Peel Public Health,2253,Control,2020-11-07T00:00:00,2020-11-22T00:00:00,http://www.peelregion.ca/health/
+94,Peel Public Health,2253,Lockdown,2020-11-23T00:00:00,2021-12-25T00:00:00,http://www.peelregion.ca/health/
+95,Peel Public Health,2253,Stay-at-home,2020-12-26T00:00:00,2021-03-07T00:00:00,http://www.peelregion.ca/health/
+96,Peterborough Public Health,2255,Prevent,2020-11-07T00:00:00,2020-11-22T00:00:00,http://www.peterboroughpublichealth.ca/
+97,Peterborough Public Health,2255,Protect,2020-11-23T00:00:00,2021-12-25T00:00:00,http://www.peterboroughpublichealth.ca/
+98,Peterborough Public Health,2255,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.peterboroughpublichealth.ca/
+99,Peterborough Public Health,2255,Protect,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.peterboroughpublichealth.ca/
+100,Porcupine Health Unit,2256,Prevent,2020-11-07T00:00:00,2021-12-25T00:00:00,http://www.porcupinehu.on.ca/
+101,Porcupine Health Unit,2256,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.porcupinehu.on.ca/
+102,Porcupine Health Unit,2256,Restrict,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.porcupinehu.on.ca/
+103,"Region of Waterloo, Public Health",2265,Protect,2020-11-07T00:00:00,2020-11-15T00:00:00,http://www.region.waterloo.on.ca/ph
+104,"Region of Waterloo, Public Health",2265,Restrict,2020-11-16T00:00:00,2020-11-22T00:00:00,http://www.region.waterloo.on.ca/ph
+105,"Region of Waterloo, Public Health",2265,Control,2020-11-23T00:00:00,2021-12-25T00:00:00,http://www.region.waterloo.on.ca/ph
+106,"Region of Waterloo, Public Health",2265,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.region.waterloo.on.ca/ph
+107,"Region of Waterloo, Public Health",2265,Control,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.region.waterloo.on.ca/ph
+108,Renfrew County and District Health Unit,2257,Prevent,2020-11-07T00:00:00,2021-12-25T00:00:00,http://www.rcdhu.com/
+109,Renfrew County and District Health Unit,2257,Stay-at-home,2020-12-26T00:00:00,2021-02-09T00:00:00,http://www.rcdhu.com/
+110,Renfrew County and District Health Unit,2257,Prevent,2021-02-10T00:00:00,2021-03-07T00:00:00,http://www.rcdhu.com/
+111,Simcoe Muskoka District Health Unit,2260,Protect,2020-11-07T00:00:00,2020-11-22T00:00:00,http://www.simcoemuskokahealth.org/
+112,Simcoe Muskoka District Health Unit,2260,Restrict,2020-11-23T00:00:00,2020-12-13T00:00:00,http://www.simcoemuskokahealth.org/
+113,Simcoe Muskoka District Health Unit,2260,Control,2020-12-14T00:00:00,2021-12-25T00:00:00,http://www.simcoemuskokahealth.org/
+114,Simcoe Muskoka District Health Unit,2260,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.simcoemuskokahealth.org/
+115,Simcoe Muskoka District Health Unit,2260,Control,2021-02-16T00:00:00,2021-02-28T00:00:00,http://www.simcoemuskokahealth.org/
+116,Simcoe Muskoka District Health Unit,2260,Lockdown,2021-03-01T00:00:00,2021-03-15T00:00:00,http://www.simcoemuskokahealth.org/
+117,Southwestern Public Health,4913,Prevent,2020-11-07T00:00:00,2020-11-15T00:00:00,https://www.swpublichealth.ca/
+118,Southwestern Public Health,4913,Protect,2020-11-16T00:00:00,2020-11-22T00:00:00,https://www.swpublichealth.ca/
+119,Southwestern Public Health,4913,Restrict,2020-11-23T00:00:00,2021-12-25T00:00:00,https://www.swpublichealth.ca/
+120,Southwestern Public Health,4913,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,https://www.swpublichealth.ca/
+121,Southwestern Public Health,4913,Control,2021-02-16T00:00:00,2021-02-28T00:00:00,https://www.swpublichealth.ca/
+122,Southwestern Public Health,4913,Restrict,2021-03-01T00:00:00,2021-03-15T00:00:00,https://www.swpublichealth.ca/
+123,Sudbury & District Health Unit,2261,Prevent,2020-11-07T00:00:00,2020-11-15T00:00:00,https://www.phsd.ca/
+124,Sudbury & District Health Unit,2261,Protect,2020-11-16T00:00:00,2020-12-20T00:00:00,https://www.phsd.ca/
+125,Sudbury & District Health Unit,2261,Prevent,2020-12-21T00:00:00,2021-12-25T00:00:00,https://www.phsd.ca/
+126,Sudbury & District Health Unit,2261,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,https://www.phsd.ca/
+127,Sudbury & District Health Unit,2261,Restrict,2021-02-16T00:00:00,2021-03-07T00:00:00,https://www.phsd.ca/
+128,Thunder Bay District Health Unit,2262,Prevent,2020-11-07T00:00:00,2020-11-22T00:00:00,http://www.tbdhu.com/
+129,Thunder Bay District Health Unit,2262,Protect,2020-11-23T00:00:00,2020-12-06T00:00:00,http://www.tbdhu.com/
+130,Thunder Bay District Health Unit,2262,Restrict,2020-12-07T00:00:00,2021-12-25T00:00:00,http://www.tbdhu.com/
+131,Thunder Bay District Health Unit,2262,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.tbdhu.com/
+132,Thunder Bay District Health Unit,2262,Control,2021-02-16T00:00:00,2021-02-28T00:00:00,http://www.tbdhu.com/
+133,Thunder Bay District Health Unit,2262,Lockdown,2021-03-01T00:00:00,2021-03-15T00:00:00,http://www.tbdhu.com/
+134,Timiskaming Health Unit,2263,Prevent,2020-11-07T00:00:00,2020-12-20T00:00:00,http://www.timiskaminghu.com/
+135,Timiskaming Health Unit,2263,Protect,2020-12-21T00:00:00,2021-12-25T00:00:00,http://www.timiskaminghu.com/
+136,Timiskaming Health Unit,2263,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.timiskaminghu.com/
+137,Timiskaming Health Unit,2263,Prevent,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.timiskaminghu.com/
+138,Toronto Public Health,3895,Other,2020-11-07T00:00:00,2020-11-15T00:00:00,http://www.toronto.ca/health/index.htm
+139,Toronto Public Health,3895,Control,2020-11-16T00:00:00,2020-11-22T00:00:00,http://www.toronto.ca/health/index.htm
+140,Toronto Public Health,3895,Lockdown,2020-11-23T00:00:00,2021-12-25T00:00:00,http://www.toronto.ca/health/index.htm
+141,Toronto Public Health,3895,Stay-at-home,2020-12-26T00:00:00,2021-03-07T00:00:00,http://www.toronto.ca/health/index.htm
+142,Wellington-Dufferin-Guelph Public Health,2266,Protect,2020-11-07T00:00:00,2020-11-15T00:00:00,http://www.wdgpublichealth.ca/
+143,Wellington-Dufferin-Guelph Public Health,2266,Restrict,2020-11-16T00:00:00,2020-12-13T00:00:00,http://www.wdgpublichealth.ca/
+144,Wellington-Dufferin-Guelph Public Health,2266,Control,2020-12-14T00:00:00,2021-12-25T00:00:00,http://www.wdgpublichealth.ca/
+145,Wellington-Dufferin-Guelph Public Health,2266,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,http://www.wdgpublichealth.ca/
+146,Wellington-Dufferin-Guelph Public Health,2266,Control,2021-02-16T00:00:00,2021-03-07T00:00:00,http://www.wdgpublichealth.ca/
+147,Windsor-Essex County Health Unit,2268,Prevent,2020-11-07T00:00:00,2020-11-15T00:00:00,https://www.wechu.org/
+148,Windsor-Essex County Health Unit,2268,Protect,2020-11-16T00:00:00,2020-11-22T00:00:00,https://www.wechu.org/
+149,Windsor-Essex County Health Unit,2268,Restrict,2020-11-23T00:00:00,2020-11-29T00:00:00,https://www.wechu.org/
+150,Windsor-Essex County Health Unit,2268,Control,2020-11-30T00:00:00,2020-12-13T00:00:00,https://www.wechu.org/
+151,Windsor-Essex County Health Unit,2268,Lockdown,2020-12-14T00:00:00,2021-12-25T00:00:00,https://www.wechu.org/
+152,Windsor-Essex County Health Unit,2268,Stay-at-home,2020-12-26T00:00:00,2021-02-15T00:00:00,https://www.wechu.org/
+153,Windsor-Essex County Health Unit,2268,Control,2021-02-16T00:00:00,2021-03-07T00:00:00,https://www.wechu.org/
+154,York Region Public Health Services,2270,Restrict,2020-11-07T00:00:00,2020-11-15T00:00:00,http://www.york.ca/wps/portal/yorkhome/health/
+155,York Region Public Health Services,2270,Control,2020-11-16T00:00:00,2020-12-13T00:00:00,http://www.york.ca/wps/portal/yorkhome/health/
+156,York Region Public Health Services,2270,Lockdown,2020-12-14T00:00:00,2021-12-25T00:00:00,http://www.york.ca/wps/portal/yorkhome/health/
+157,York Region Public Health Services,2270,Stay-at-home,2020-12-26T00:00:00,2021-02-21T00:00:00,http://www.york.ca/wps/portal/yorkhome/health/
+158,York Region Public Health Services,2270,Control,2021-02-22T00:00:00,2021-03-07T00:00:00,http://www.york.ca/wps/portal/yorkhome/health/
