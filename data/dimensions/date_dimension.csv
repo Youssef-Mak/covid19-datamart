@@ -1,4 +1,5 @@
 date_dim_key,full_date,day,month,year,day_of_year,week_of_year,weekday,is_weekend,season,is_month_start,is_month_end,is_year_start,is_year_end,is_can_holiday,can_holiday_name,is_us_holiday,us_holiday_name
+-1,0000-00-00,0,0,0,0,0,0,False,,False,False,False,False,False,Non-Holiday,False,Non-Holiday
 0,2019-11-01,1,11,2019,305,44,5,False,fall,True,False,True,True,False,Non-Holiday,False,Non-Holiday
 1,2019-11-02,2,11,2019,306,44,6,False,fall,True,False,True,True,False,Non-Holiday,False,Non-Holiday
 2,2019-11-03,3,11,2019,307,44,0,False,fall,True,False,True,True,False,Non-Holiday,False,Non-Holiday
@@ -472,3 +473,26 @@ date_dim_key,full_date,day,month,year,day_of_year,week_of_year,weekday,is_weeken
 470,2021-02-13,13,2,2021,44,6,6,False,winter,False,False,True,False,False,Non-Holiday,False,Non-Holiday
 471,2021-02-14,14,2,2021,45,6,0,False,winter,False,False,True,False,False,Non-Holiday,False,Non-Holiday
 472,2021-02-15,15,2,2021,46,7,1,False,winter,False,False,True,False,True,Family Day,True,Washington's Birthday
+473,2021-02-16,16,2,2021,47,7,2,False,winter,False,False,True,False,False,Non-Holiday,False,Non-Holiday
+474,2021-02-17,17,2,2021,48,7,3,False,winter,False,False,True,False,False,Non-Holiday,False,Non-Holiday
+475,2021-02-18,18,2,2021,49,7,4,False,winter,False,False,True,False,False,Non-Holiday,False,Non-Holiday
+476,2021-02-19,19,2,2021,50,7,5,False,winter,False,False,True,False,False,Non-Holiday,False,Non-Holiday
+477,2021-02-20,20,2,2021,51,7,6,False,winter,False,True,True,False,False,Non-Holiday,False,Non-Holiday
+478,2021-02-21,21,2,2021,52,7,0,False,winter,False,True,True,False,False,Non-Holiday,False,Non-Holiday
+479,2021-02-22,22,2,2021,53,8,1,False,winter,False,True,True,False,False,Non-Holiday,False,Non-Holiday
+480,2021-02-23,23,2,2021,54,8,2,False,winter,False,True,True,False,False,Non-Holiday,False,Non-Holiday
+481,2021-02-24,24,2,2021,55,8,3,False,winter,False,True,True,False,False,Non-Holiday,False,Non-Holiday
+482,2021-02-25,25,2,2021,56,8,4,False,winter,False,True,True,False,False,Non-Holiday,False,Non-Holiday
+483,2021-02-26,26,2,2021,57,8,5,False,winter,False,True,True,False,False,Non-Holiday,False,Non-Holiday
+484,2021-02-27,27,2,2021,58,8,6,False,winter,False,True,True,False,False,Non-Holiday,False,Non-Holiday
+485,2021-02-28,28,2,2021,59,8,0,False,winter,False,True,True,False,False,Non-Holiday,False,Non-Holiday
+486,2021-03-01,1,3,2021,60,9,1,False,spring,True,False,True,False,False,Non-Holiday,False,Non-Holiday
+487,2021-03-02,2,3,2021,61,9,2,False,spring,True,False,True,False,False,Non-Holiday,False,Non-Holiday
+488,2021-03-03,3,3,2021,62,9,3,False,spring,True,False,True,False,False,Non-Holiday,False,Non-Holiday
+489,2021-03-04,4,3,2021,63,9,4,False,spring,True,False,True,False,False,Non-Holiday,False,Non-Holiday
+490,2021-03-05,5,3,2021,64,9,5,False,spring,True,False,True,False,False,Non-Holiday,False,Non-Holiday
+491,2021-03-06,6,3,2021,65,9,6,False,spring,True,False,True,False,False,Non-Holiday,False,Non-Holiday
+492,2021-03-07,7,3,2021,66,9,0,False,spring,True,False,True,False,False,Non-Holiday,False,Non-Holiday
+493,2021-03-08,8,3,2021,67,10,1,False,spring,True,False,True,False,False,Non-Holiday,False,Non-Holiday
+494,2021-03-09,9,3,2021,68,10,2,False,spring,True,False,True,False,False,Non-Holiday,False,Non-Holiday
+495,2021-03-10,10,3,2021,69,10,3,False,spring,True,False,True,False,False,Non-Holiday,False,Non-Holiday

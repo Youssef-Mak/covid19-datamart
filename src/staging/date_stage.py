@@ -33,9 +33,30 @@ def get_season(date):
 
 def gen_date_df(df):
     sdate = date(2019, 11, 1)   # start date
-    edate = date(2021, 2, 15)   # end date
+    edate = date(2021, 3, 10)   # end date
 
     delta = edate - sdate       # as timedelta
+    # Set Dummy Row
+    row = {}
+    row['full_date'] = "0000-00-00"
+    row['day'] = 0 
+    row['month'] = 0 
+    row['year'] = 0 
+    row['day_of_year'] = 0 
+    row['week_of_year'] = 0 
+    row['weekday'] = 0 
+    row['is_weekend'] = False
+    row['season'] = ""
+    row['is_month_start'] = False
+    row['is_month_end'] = False
+    row['is_year_start'] = False
+    row['is_year_end'] = False
+    row['is_can_holiday'] = False
+    row['can_holiday_name'] = 'Non-Holiday'
+    row['is_us_holiday'] = False
+    row['us_holiday_name'] = 'Non-Holiday'
+    row['date_dim_key'] = -1
+    df = df.append(row, ignore_index=True)
     for i in range(delta.days + 1):
         day_date = sdate + timedelta(days=i)
         row = {}
