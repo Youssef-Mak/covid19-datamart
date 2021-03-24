@@ -1,9 +1,4 @@
--- For instance, provide the (i) the number of cases in a specific PHU
--- (resolved, unresolved and fatal), (ii) the number cases across the PHUs
--- when a specific special measure was in place, (iii) the mobility levels in
--- Ottawa, etc. 
-
--- Cases per case outcome per phu on April 2020
+-- Case outcomes per phu on April 2020
 SELECT phu.phu_name, f.resolved, f.un_resolved, f.fatal, count(*)
 FROM 
   "Covid19DataMart".covid19_tracking_fact AS f

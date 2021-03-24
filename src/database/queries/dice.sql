@@ -20,6 +20,6 @@ FROM
   ON f.patient_dim_key = pat.patient_dim_key
   INNER JOIN
   "Covid19DataMart".date_dimension AS d
-  ON f.onset_date_dim_key = d.date_dim_key
+ON f.onset_date_dim_key = d.date_dim_key
 WHERE d.season IN ('summer', 'spring') AND pat.age_group IN ('20s', '70s') 
 GROUP BY (d.season, pat.age_group);
