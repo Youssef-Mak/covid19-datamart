@@ -1,8 +1,9 @@
 # covid19-datamart
-Covid 19 Datamart
 
-## Setup 
-Install the requirements 
+## Setup
+
+Install the requirements
+
 ```
 pip install -r requirements.txt
 ```
