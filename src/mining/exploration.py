@@ -1,44 +1,76 @@
 import database_connect
+import psycopg2
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
 def main():
-    database_connection = database_connect.connect()
-    cursor = database_connection.cursor()
+    try:
+        database_connection = database_connect.connect()
+        cursor = database_connection.cursor()
 
-    # Get the data
-    query_string = '''
-                    SELECT spec.title, mob.metro_area, mob.subregion, f.resolved, f.un_resolved, f.fatal, phu.phu_name, p.age_group, p.gender, d.day, d.month, d.season
-                    FROM "Covid19DataMart".covid19_tracking_fact AS f 
-                    INNER JOIN "Covid19DataMart".date_dimension AS d 
-                    ON f.onset_date_dim_key = d.date_dim_key 
-                    INNER JOIN "Covid19DataMart".patient_dimension AS p 
-                    ON f.patient_dim_key = p.patient_dim_key  
-                    INNER JOIN "Covid19DataMart".phu_dimension AS phu 
-                    ON f.phu_dim_key = phu.phu_dim_key
-                    INNER JOIN "Covid19DataMart".mobility_dimension AS mob
-                    ON f.mobility_dim_key = mob.mobility_dim_key
-                    INNER JOIN "Covid19DataMart".special_measures_dimension as spec
-                    ON f.special_measures_dim_key = spec.special_measures_dim_key'''
-    
-    case_counts_query = '''SELECT count(CASE WHEN f.resolved THEN 1 END), count(CASE WHEN f.un_resolved THEN 1 END), count(CASE WHEN f.fatal THEN 1 END) 
-                    FROM "Covid19DataMart".covid19_tracking_fact as f'''
-    
-    case_counts = query_data(case_counts_query, cursor)
-    print("Querying for raw data...")
-    raw_data = query_data(query_string, cursor)
+        # Get the data
+        query_string = '''
+                        SELECT spec.title, mob.metro_area, mob.subregion, f.resolved, f.un_resolved, f.fatal, phu.phu_name, p.age_group, p.gender, d.day, d.month, d.season
+                        FROM "Covid19DataMart".covid19_tracking_fact AS f 
+                        INNER JOIN "Covid19DataMart".date_dimension AS d 
+                        ON f.onset_date_dim_key = d.date_dim_key 
+                        INNER JOIN "Covid19DataMart".patient_dimension AS p 
+                        ON f.patient_dim_key = p.patient_dim_key  
+                        INNER JOIN "Covid19DataMart".phu_dimension AS phu 
+                        ON f.phu_dim_key = phu.phu_dim_key
+                        INNER JOIN "Covid19DataMart".mobility_dimension AS mob
+                        ON f.mobility_dim_key = mob.mobility_dim_key
+                        INNER JOIN "Covid19DataMart".special_measures_dimension as spec
+                        ON f.special_measures_dim_key = spec.special_measures_dim_key'''
+        
+        case_counts_query = '''SELECT count(CASE WHEN f.resolved THEN 1 END), count(CASE WHEN f.un_resolved THEN 1 END), count(CASE WHEN f.fatal THEN 1 END) 
+                        FROM "Covid19DataMart".covid19_tracking_fact as f'''
+        
+        case_counts = query_data(case_counts_query, cursor)
+        print("Querying for raw data...")
+        raw_data = query_data(query_string, cursor)
 
-    # visualize_case_counts(case_counts[0])
-    print("Processing age groups...")
-    boxplot_data = process_age_groups(raw_data, case_counts)
-    visualize_age_groups(boxplot_data)
+        visualize_case_counts(case_counts[0])
+        print("Processing age groups...")
+        boxplot_data = process_age_groups(raw_data, case_counts)
+        visualize_age_groups(boxplot_data)
+        visualize_boxplot_case_counts(case_counts[0])
+        visualize_gender_location(raw_data)
 
-	# close the communication with the PostgreSQL
-    cursor.close()
-    if database_connection is not None:
+        # close the communication with the PostgreSQL
+        cursor.close()
+        if database_connection is not None:
+                database_connection.close()
+                print('Database connection closed.')
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+    finally:
+        if database_connection is not None:
             database_connection.close()
             print('Database connection closed.')
+
+
+def visualize_boxplot_case_counts(case_counts):
+    boxplot_data = [1] * case_counts[0] 
+    boxplot_data = boxplot_data + [2] * case_counts[1]
+    boxplot_data = boxplot_data + [3] * case_counts[2]
+    labels = ["x1"]
+
+    fig, ax = plt.subplots()
+
+    # rectangular box plot
+    bplot1 = ax.boxplot(boxplot_data,
+                        vert=True,  # vertical box alignment
+                        patch_artist=True,  # fill with color
+                        labels=labels)  # will be used to label x-ticks
+    ax.set_title('Distribution of Case Status')
+
+    ax.set_xlabel('Case Status')
+    ax.set_ylabel('Observed values')
+
+    plt.show()
+
 
 def visualize_case_counts(data):
     fig, ax = plt.subplots()
@@ -117,28 +149,43 @@ def visualize_age_groups(data):
     plt.show()
     fig.savefig('./visualizations/age_group_vs_case_status.png')
 
-def summarize_data(data_rows):
-    """
-    Splitting up the raw data so it can be summarized through visualization.
+def visualize_gender_location(data):
+    locations = []
+    gender_vs_num_cases = dict() # {MTL: {male: 20, female: 10}, ...}
 
-    Visualizations will include:
-        1. Sum of resolved, unresolved, and fatal histogram
-        2. Bar chart of age group vs. resolved, unresolved, and fatal
-        3. plot of gender vs. resolved, unresolved, fatal
-        4. PHU location vs. num cases
-        5. Season 
-        6. Do a boxplot of case counts (literally one box plot with the 3 counts in it)
-    """
+    for row in data:
+        location = row[6]
+        gender = row[8]
+        if location in gender_vs_num_cases:
+            if gender.lower() == "male":
+                gender_vs_num_cases[location]["male"] += 1
+            else:
+                gender_vs_num_cases[location]["female"] += 1
+        else:
+            locations.append(location)
+            if gender.lower() == "male":
+                gender_vs_num_cases[location] = {"male": 1, "female": 0}
+            else:
+                gender_vs_num_cases[location] = {"male": 0, "female": 1}
 
-    #resolved = 3, unresolved = 4, fatal = 5
-    resolved = 0
-    unresolved = 0
-    fatal = 0
+    male_values = [gender_vs_num_cases[location]["male"] for location in locations]
+    female_values = [gender_vs_num_cases[location]["female"] for location in locations]
+    locations = [x.replace("Public Health", "") for x in locations]
+    locations = [x.replace("Health Department", "") for x in locations]
+    
+    fig, ax = plt.subplots()
+    ax.scatter(locations, male_values, color="blue", label="male", edgecolors='none')
+    
+    ax.scatter(locations, female_values, color="red", label="female", edgecolors='none')
 
-    # for row in data_rows:
-    #     if row[3]:
-    #         resolved.
+    ax.set_xlabel("PHU Location Name")
+    ax.set_ylabel("Case Count")
+    ax.set_title("Gender Case Counts for PHU Locations")
+    ax.legend()
+    ax.grid(True)
 
+    plt.show()
+    fig.savefig('./visualizations/gender_case_counts_phu_location.png')
 
 def query_data(query, cursor):
     cursor.execute(query)
