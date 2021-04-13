@@ -85,7 +85,7 @@ def visualize_case_counts(data):
     ax.legend()
 
     plt.show()
-    fig.savefig('./visualizations/case_counts_bar_chart.png')
+    # fig.savefig('./visualizations/case_counts_bar_chart.png')
 
 def process_age_groups(data, case_counts):
     age_group_case_counts = {"<20": {}, "30s": {}, "40s": {}, "50s": {}, "60s": {}, "70s": {}, "80s": {}, "90+": {}, "UNKNOWN": {}}
@@ -147,7 +147,7 @@ def visualize_age_groups(data):
     ax.legend()
 
     plt.show()
-    fig.savefig('./visualizations/age_group_vs_case_status.png')
+    # fig.savefig('./visualizations/age_group_vs_case_status.png')
 
 def visualize_gender_location(data):
     locations = []
@@ -185,7 +185,7 @@ def visualize_gender_location(data):
     ax.grid(True)
 
     plt.show()
-    fig.savefig('./visualizations/gender_case_counts_phu_location.png')
+    # fig.savefig('./visualizations/gender_case_counts_phu_location.png')
 
 def query_data(query, cursor):
     cursor.execute(query)

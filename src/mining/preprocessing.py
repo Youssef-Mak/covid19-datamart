@@ -26,10 +26,15 @@ def main():
                         INNER JOIN "Covid19DataMart".special_measures_dimension as spec
                         ON f.special_measures_dim_key = spec.special_measures_dim_key'''
 
+        # Query the data
         print("Querying data...")
         raw_data = query_data(query_string, cursor)
+        
+        # Preprocess the data
         print("Preprocessing data...")
         preprocess_data(raw_data)
+        
+        # End the connection
         cursor.close()
         database_connection.close()
         print('Database connection closed.')
