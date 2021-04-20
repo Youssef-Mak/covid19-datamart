@@ -1,6 +1,7 @@
 import os
 import sys
 import pandas as pd
+from matplotlib import pyplot as plt
 import numpy as np
 import time
 
@@ -11,7 +12,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.multiclass import OneVsRestClassifier
 from sklearn import metrics
+from sklearn import tree
 
 
 '''
@@ -68,15 +71,25 @@ def gen_decision_tree():
     print(classification_report(test_labels, dt_pred))
     end = time.perf_counter ()
     print ("Time: ", end-start)
+    print ("Retrieving decision tree...")
+    fig = plt.figure(figsize=(100,100))
+    _ = tree.plot_tree(dt_clf, 
+                    feature_names=feature_list,
+                    max_depth=9,  
+                    class_names=['fatal','unresolved','resolved'],
+                    filled=True,
+                    fontsize=20)
+    fig.savefig("decistion_tree.png")
 
 
 def gen_gradient_boost():
     print ('\nGradient Boost Algorithm')
     start = time.perf_counter ()
-    gradient_booster = GradientBoostingClassifier ()
-    # gradient_booster.fit (train_features, train_labels)
-    # gradient_booster_pred = gradient_booster.predict (test_features)
-    # print(classification_report(test_labels, gradient_booster_pred))
+    
+    gradient_booster= OneVsRestClassifier(GradientBoostingClassifier ()).fit(train_features, train_labels)
+
+    gradient_booster_pred = gradient_booster.predict (test_features)
+    print(classification_report(test_labels, gradient_booster_pred))
     end = time.perf_counter ()
     print ("Time: ", end-start)
 
